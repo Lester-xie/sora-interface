@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, {useContext, useEffect} from 'react'
 import { Menu as UikitMenu, ConnectorId } from '../../uikit'
 import { useWeb3React } from '@web3-react/core'
 import { allLanguages } from 'constants/localisation/languageCodes'
