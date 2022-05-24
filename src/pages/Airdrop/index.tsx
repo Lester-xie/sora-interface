@@ -130,7 +130,7 @@ const queryFetch = (url) => {
         }).then(res => res.json())
         .then(data => {
           resolve(data)
-        })       
+        })
     })
 }
 
@@ -185,7 +185,7 @@ const Airdrop = () => {
         setOpenSearchNot(false)
         // document.querySelector('body').removeAttribute('style')
     }
-    
+
     return (
         <>
         <AppBody>
@@ -196,9 +196,9 @@ const Airdrop = () => {
                         <div className="input">
                         <textarea rows={2}  value={inputValue} onChange={handleInputChange} placeholder="0x..." />
                         </div>
-                        
+
                         {
-                            inputErr ? (<p className="tips">{TranslateString(1286, 'Please fill in the correct wallet address used when participating in the Joint beta of CherrySwap&OKExChain.')}</p>) : (<></>)
+                            inputErr ? (<p className="tips">{TranslateString(1286, 'Please fill in the correct wallet address used when participating in the Joint beta of StrawberriesSwap&OKExChain.')}</p>) : (<></>)
                         }
                     </div>
                     {

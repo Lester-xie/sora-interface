@@ -18,7 +18,7 @@ const Logo: React.FC<LogoProps> = ({ isDark, ...props }) => {
             <g id="首页" transform="translate(-86.000000, -17.000000)">
                 <g id="-mockplus-" transform="translate(86.000000, 17.000000)">
                     <g id="logo" transform="translate(1.000000, 2.000000)">
-                        <g id="编组-3">
+                        <g id="编组-3" transform="translate(-41.000000, 2.000000)">
                             <path d="M7.47828054,27.5826971 C7.24107755,26.4225905 7.09921581,25.6978924 7.05269533,25.4086028 C4.75487012,11.119477 9.76501923,2.52312578 23.0540333,0" id="路径-4" stroke="#25030A" strokeWidth="1.86766852" strokeLinecap="round"></path>
                             <path d="M23.0540333,0 C15.6543008,8.46355738 15.8453175,17.3407473 23.6270836,26.6315697" id="路径-5" stroke="#25030A" strokeWidth="1.86766852" strokeLinecap="round"></path>
                             <g id="编组-2" transform="translate(0.000000, 23.587962)">
@@ -47,8 +47,8 @@ const Logo: React.FC<LogoProps> = ({ isDark, ...props }) => {
                             <path d="M21.0112709,3.80450995 C23.9147127,5.35301225 25.7953511,7.19185872 26.6531862,9.32104938" id="路径-7" stroke="#25030A" strokeWidth="1.24511235" strokeLinecap="round"></path>
                         </g>
                         <text id="CherrySwap" fontFamily="SourceHanSans-Bold, Source Han Sans" fontSize="24" fontWeight="bold">
-                            <tspan x="46" y="31" fill="#E55268">Cherry</tspan>
-                            <tspan x="125.776" y="31" fill="#25030A">Swap</tspan>
+                            <tspan x="6" y="31" fill="#E55268">Strawberries</tspan>
+                            <tspan x="155.776" y="31" fill="#25030A">Swap</tspan>
                         </text>
                     </g>
                 </g>

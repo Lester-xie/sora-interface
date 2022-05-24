@@ -276,7 +276,7 @@ const Airdrop = () => {
   const [inputErr, setInputErr] = useState(true)
   const [isVerify, setIsVerify] = useState(false)
   const [token, setToken] = useState('')
-  const [errorText, setErrorText] = useState(TranslateString(1286, 'Please fill in the correct wallet address used when participating in the Joint beta of CherrySwap&OKExChain.'))
+  const [errorText, setErrorText] = useState(TranslateString(1286, 'Please fill in the correct wallet address used when participating in the Joint beta of StrawberriesSwap&OKExChain.'))
   const [isOpen, setIsOpen] = useState(false)
   const [openSearchNot, setOpenSearchNot] = useState(false)
   const [isLoading, setIsLoading] = useState(false)
@@ -338,7 +338,7 @@ const Airdrop = () => {
     const reg = /^[a-z0-9A-Z]+$/
 
     if (!reg.test(ev.target.value)) {
-      setErrorText(TranslateString(1286, 'Please fill in the correct wallet address used when participating in the Joint beta of CherrySwap&OKExChain.'))
+      setErrorText(TranslateString(1286, 'Please fill in the correct wallet address used when participating in the Joint beta of StrawberriesSwap&OKExChain.'))
       setInputErr(true)
     } else {
       setInputErr(false)
@@ -388,7 +388,7 @@ const Airdrop = () => {
 
     const reg = /^[a-z0-9A-Z]+$/
     if (!reg.test(hashInputValue)) {
-      setErrorText(TranslateString(1286, 'Please fill in the correct wallet address used when participating in the Joint beta of CherrySwap&OKExChain.'))
+      setErrorText(TranslateString(1286, 'Please fill in the correct wallet address used when participating in the Joint beta of StrawberriesSwap&OKExChain.'))
       setInputErr(true)
     } else {
       setInputErr(false)

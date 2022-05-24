@@ -252,7 +252,7 @@ const Airdrop = () => {
             </PastWrap>
             {
               inputErr ? (
-                <p className='tips'>{TranslateString(1286, 'Please fill in the correct wallet address used when participating in the Joint beta of CherrySwap&OKExChain.')}</p>) : (<></>)
+                <p className='tips'>{TranslateString(1286, 'Please fill in the correct wallet address used when participating in the Joint beta of StrawberriesSwap&OKExChain.')}</p>) : (<></>)
             }
             {
               inputErr ? (<ConfirmBtn style={{ background: '#DFDFDF' }}>{TranslateString(1288, 'View')}</ConfirmBtn>) : (
