@@ -34,43 +34,43 @@ const config: MenuEntry[] = [
     href: origin + '/pools',
     stringId: '1418'
   },
-  {
-    label: 'IFO',
-    icon: 'IfoIcon',
-    href: origin + '/ifo'
-  },
-  {
-    label: 'Airdrop list',
-    icon: 'KtIcon',
-    calloutClass: 'rainbow',
-    stringId: '1408',
-    items: [
-      {
-        label: 'airdrop 1 (the joint beta)',
-        href: '/airdrop1',
-        stringId: '1410'
-      },
-      {
-        label: 'airdrop 2',
-        href: '/airdrop2',
-        stringId: '1412'
-      },
-      {
-        label: 'airdrop 3',
-        href: '/airdrop3',
-        stringId: '1414'
-      },
-    ]
-  },
-
-
-  {
-    label: 'Get OKT (testnet)',
-    icon: 'TestnetIcon',
-    target: '_blank',
-    href: 'https://discord.gg/B5nMs6qK5F',
-    stringId: '1406'
-  },
+  // {
+  //   label: 'IFO',
+  //   icon: 'IfoIcon',
+  //   href: origin + '/ifo'
+  // },
+  // {
+  //   label: 'Airdrop list',
+  //   icon: 'KtIcon',
+  //   calloutClass: 'rainbow',
+  //   stringId: '1408',
+  //   items: [
+  //     {
+  //       label: 'airdrop 1 (the joint beta)',
+  //       href: '/airdrop1',
+  //       stringId: '1410'
+  //     },
+  //     {
+  //       label: 'airdrop 2',
+  //       href: '/airdrop2',
+  //       stringId: '1412'
+  //     },
+  //     {
+  //       label: 'airdrop 3',
+  //       href: '/airdrop3',
+  //       stringId: '1414'
+  //     },
+  //   ]
+  // },
+  //
+  //
+  // {
+  //   label: 'Get OKT (testnet)',
+  //   icon: 'TestnetIcon',
+  //   target: '_blank',
+  //   href: 'https://discord.gg/B5nMs6qK5F',
+  //   stringId: '1406'
+  // },
 
 
 
