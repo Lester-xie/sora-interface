@@ -109,16 +109,16 @@ const PanelBody: React.FC<Props> = ({ isPushed, pushNav, isMobile, links }) => {
 
 
 
-      {isPushed &&
-      <div className="linkInfo">
-        <a className="link" href="https://info.cherryswap.net" target="_blank">Info</a>
-        <a className="link" href="https://docs.cherryswap.net" target="_blank">Docs</a>
-        <a className="link" href="https://cherryswapnet.medium.com/" target="_blank">Medium</a>
-        <a className="link" href="https://twitter.com/CherryswapNet" target="_blank">Twitter</a>
-        <a className="link" href="https://t.me/cherryswap_3st" target="_blank">Telegram-CN</a>
-        <a className="link" href="https://t.me/cherryswap_1st" target="_blank">Telegram-EN</a>
-      </div>
-      }
+      {/*{isPushed &&*/}
+      {/*<div className="linkInfo">*/}
+      {/*  <a className="link" href="https://info.cherryswap.net" target="_blank">Info</a>*/}
+      {/*  <a className="link" href="https://docs.cherryswap.net" target="_blank">Docs</a>*/}
+      {/*  <a className="link" href="https://cherryswapnet.medium.com/" target="_blank">Medium</a>*/}
+      {/*  <a className="link" href="https://twitter.com/CherryswapNet" target="_blank">Twitter</a>*/}
+      {/*  <a className="link" href="https://t.me/cherryswap_3st" target="_blank">Telegram-CN</a>*/}
+      {/*  <a className="link" href="https://t.me/cherryswap_1st" target="_blank">Telegram-EN</a>*/}
+      {/*</div>*/}
+      {/*}*/}
 
 
 
