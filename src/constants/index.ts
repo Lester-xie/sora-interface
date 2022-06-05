@@ -27,8 +27,8 @@ export enum Rounding {
 }
 
 export enum ChainId {
-  MAINNET = 64,
-  OKTESTNET = 65
+  MAINNET = 200101,
+  OKTESTNET = 200101
 }
 
 // 各种合约地址配置
@@ -46,8 +46,8 @@ export const FACTORY_ADDRESS = env.factory
 export const INIT_CODE_HASH = env.init_code_hash
 
 
-export const WETHMAINNET = env.wokt
-export const WETHTESTNET = env.wokt
+export const WETHMAINNET = env.tada
+export const WETHTESTNET = env.tada
 
 export const KLPNAME = 'Strawberries LPs'
 export const KLPSYMBOL = 'Che-LP'
@@ -57,15 +57,15 @@ export const WETH = {
     ChainId.MAINNET,
     WETHMAINNET,
     18,
-    'WOKT',
-    'Wrapped OKT'
+    'WADA',
+    'milkTADA'
   ),
   [ChainId.OKTESTNET]: new Token(
     ChainId.OKTESTNET,
     WETHTESTNET,
     18,
-    'WOKT',
-    'Wrapped OKT'
+    'WADA',
+    'milkTADA'
   )
 }
 
@@ -141,7 +141,7 @@ export const PINNED_PAIRS: { readonly [chainId in ChainId]?: [Token, Token][] } 
   [ChainId.MAINNET]: [
     [
       new Token(ChainId.MAINNET, '0x0e09fabb73bd3ade0a17ecc321fd13a19e81ce82', 18, 'CAKE', 'StrawberriesSwap Token'),
-      new Token(ChainId.MAINNET, WETHTESTNET, 18, 'WOKT', 'Wrapped OKT')
+      new Token(ChainId.MAINNET, WETHTESTNET, 18, 'WADA', 'milkTADA')
       // new Token(ChainId.MAINNET, '0x22C402866dc7409C81eAc6c240F7708a618c917e', 18, 'WOKT', 'Wrapped OKT'),
     ],
     [USDT],

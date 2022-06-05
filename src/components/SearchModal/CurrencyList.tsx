@@ -1,4 +1,4 @@
-import React, { CSSProperties, MutableRefObject, useCallback, useMemo } from 'react'
+import React, {CSSProperties, MutableRefObject, useCallback, useEffect, useMemo, useState} from 'react'
 import { FixedSizeList } from 'react-window'
 import styled from 'styled-components'
 import { Text } from '../../uikit'
@@ -7,7 +7,7 @@ import { useActiveWeb3React } from '../../hooks'
 import { Currency, CurrencyAmount, currencyEquals, ETHER, Token } from '../../sdk'
 import { useSelectedTokenList, WrappedTokenInfo } from '../../state/lists/hooks'
 import { useAddUserToken, useRemoveUserAddedToken } from '../../state/user/hooks'
-import { useCurrencyBalance } from '../../state/wallet/hooks'
+import { useNewCurrencyBalance } from '../../state/wallet/hooks'
 import { LinkStyledButton, TYPE } from '../Shared'
 import { useIsUserAddedToken } from '../../hooks/Tokens'
 import Column from '../Column'
@@ -17,6 +17,8 @@ import { MouseoverTooltip } from '../Tooltip'
 import { FadedSpan, MenuItem } from './styleds'
 import Loader from '../Loader'
 import { isTokenOnList } from '../../utils'
+import { hooks } from "../../connectors/metaMask";
+import { formatUnits } from "@ethersproject/units";
 
 const { main: Main } = TYPE
 
@@ -46,7 +48,7 @@ const Tag = styled.div`
 `
 
 function Balance({ balance }: { balance: CurrencyAmount }) {
-  return <StyledBalanceText title={balance.toExact()}>{balance.toSignificant(4)}</StyledBalanceText>
+  return <StyledBalanceText>{balance}</StyledBalanceText>
 }
 
 const TagContainer = styled.div`
@@ -83,6 +85,8 @@ function TokenTags({ currency }: { currency: Currency }) {
   )
 }
 
+const { useProvider } = hooks
+
 function CurrencyRow({
   currency,
   onSelect,
@@ -101,12 +105,24 @@ function CurrencyRow({
   const selectedTokenList = useSelectedTokenList()
   const isOnSelectedList = isTokenOnList(selectedTokenList, currency)
   const customAdded = useIsUserAddedToken(currency)
-  const balance = useCurrencyBalance(account ?? undefined, currency)
+  // const balance = useNewCurrencyBalance(account ?? undefined, currency)
+  const [balance, setBalance] = useState()
+  const provider = useProvider()
+
+  useEffect(() => {
+    if (provider) {
+      provider.getBalance(account).then(res => {
+        // @ts-ignore
+        setBalance(formatUnits(res, 18))
+      }).catch(err => {
+        console.log(err)
+      })
+    }
+  }, [provider, account])
 
   const removeToken = useRemoveUserAddedToken()
   const addToken = useAddUserToken()
 
-  // only show add or remove buttons if not on selected list
   return (
     <MenuItem
       style={style}
@@ -182,14 +198,9 @@ export default function CurrencyList({
   const Row = useCallback(
     ({ data, index, style }) => {
       const currency: Currency = data[index]
-      // const currency: Currency = data
       const isSelected = Boolean(selectedCurrency && currencyEquals(selectedCurrency, currency))
       const otherSelected = Boolean(otherCurrency && currencyEquals(otherCurrency, currency))
-      // console.log('currency ???', currency)
-      // console.log('isSelected ???', isSelected)
-      // console.log('otherSelected ???', otherSelected)
       const handleSelect = () => {
-        // document.stop
         console.log('CurrencyList > useCallback > currency', currency)
         try {
           onCurrencySelect(currency)
@@ -215,16 +226,6 @@ export default function CurrencyList({
 
   return (
     <div>
-
-      {/*{*/}
-      {/*  itemData.map((item,index)=>(*/}
-      {/*    <div>*/}
-      {/*      {index}*/}
-      {/*      /!*<Row key={item.symbol} data={item} index={index}></Row>*!/*/}
-      {/*    </div>*/}
-      {/*  ))*/}
-      {/*}*/}
-
       <FixedSizeList
         height={height}
         ref={fixedListRef as any}

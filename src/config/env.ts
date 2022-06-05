@@ -6,9 +6,9 @@ export const MERGE = process.env.REACT_APP_MERGE || 'pe'
  *  ************** 有改动请 interface 和 frontend 保持同步 ******************
  */
 const globalCoin = {
-  wokt:{65:'0x2219845942d28716c0f7c605765fabdca1a7d9e0',64:'0x2219845942d28716c0f7c605765fabdca1a7d9e0'},
-  tusdt:{65:'0x1360ea441A3E7DE927Efa3bA1448AdAa52DBCdC0',64:'0x1360ea441A3E7DE927Efa3bA1448AdAa52DBCdC0'},
-  tusdc:{65:'0x68AFe3c6Fe6e9A2145b4c32BB97DAF7f44A1166e',64:'0x68AFe3c6Fe6e9A2145b4c32BB97DAF7f44A1166e'},
+  tada:{200101:'0x2219845942d28716c0f7c605765fabdca1a7d9e0'},
+  // tusdt:{200101:'0x1360ea441A3E7DE927Efa3bA1448AdAa52DBCdC0'},
+  // tusdc:{200101:'0x68AFe3c6Fe6e9A2145b4c32BB97DAF7f44A1166e'},
 }
 const nodeConfiguration: object = {
   t1: {
@@ -18,8 +18,7 @@ const nodeConfiguration: object = {
     factory: '0x3f65323e8FE950eD6b00c9ade89E32552e5A2b82',
     router02: '0xE37dbcf6FF72Dd8AcB3573e616FE14788AbDc1c4',
     syrup: {
-      65: '0x69E0B474a24a3F28057B64Fb5be1d3472Adc2CA5',
-      64: '0x69E0B474a24a3F28057B64Fb5be1d3472Adc2CA5'
+      200101: '0x69E0B474a24a3F28057B64Fb5be1d3472Adc2CA5',
     }
   },
   // 主网合约
@@ -82,5 +81,6 @@ let config = nodeConfiguration[MERGE]
 for (let z in config){
   config[z] = getAddress(config[z])
 }
+console.log('config: ', config)
 
 export default config

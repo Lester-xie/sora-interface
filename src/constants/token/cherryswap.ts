@@ -12,21 +12,21 @@ export default {
   "logoURI": getTokenLogoURL(env.wokt),
   "keywords": ["cherry", "default"],
   "tokens": [
-    {
-      "name": "TUSDT",
-      "symbol": "TUSDT",
-      "address": env.tusdt,
-      "chainId": 65,
-      "decimals": 18,
-      "logoURI": getTokenLogoURL(env.tusdt)
-    },
-    {
-      "name": "TUSDC",
-      "symbol": "TUSDC",
-      "address":env.tusdc,
-      "chainId": 65,
-      "decimals": 18,
-      "logoURI": getTokenLogoURL(env.tusdc)
-    },
+    // {
+    //   "name": "TUSDT",
+    //   "symbol": "TUSDT",
+    //   "address": env.tusdt,
+    //   "chainId": 65,
+    //   "decimals": 18,
+    //   "logoURI": getTokenLogoURL(env.tusdt)
+    // },
+    // {
+    //   "name": "TUSDC",
+    //   "symbol": "TUSDC",
+    //   "address":env.tusdc,
+    //   "chainId": 65,
+    //   "decimals": 18,
+    //   "logoURI": getTokenLogoURL(env.tusdc)
+    // },
   ]
 }

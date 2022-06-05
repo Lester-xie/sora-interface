@@ -27,12 +27,12 @@ export function getNetworkLibrary(): Web3Provider {
   // eslint-disable-next-line no-return-assign
   return (networkLibrary = networkLibrary ?? new Web3Provider(network.provider as any))
 }
-export const supportedChainIds = [64, 65]
+export const supportedChainIds = [200101]
 export var injected = new InjectedConnector({
-  supportedChainIds 
+  supportedChainIds
 })
 
-export var bsc = new BscConnector({ supportedChainIds: [64] })
+export var bsc = new BscConnector({ supportedChainIds: [200101] })
 
 // mainnet only
 export const walletconnect = new WalletConnectConnector({

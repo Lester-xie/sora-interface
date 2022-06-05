@@ -11,6 +11,7 @@ import { useActiveWeb3React } from '../../../hooks'
 import {  getOkLinkLink } from '../../../utils'
 import TranslatedText from '../../../components/TranslatedText'
 import useI18n from 'hooks/useI18n'
+import { metaMask } from '../../../connectors/metaMask'
 
 interface Props {
   account: string;
@@ -60,11 +61,12 @@ const AccountModal: React.FC<Props> = ({ account, logout, onDismiss = () => null
           size="sm"
           variant="secondary"
           onClick={() => {
-            logout();
-            window.localStorage.removeItem(localStorageKey);
-            window.localStorage.removeItem(localStorageConnectorId);
+            // logout();
+            // window.localStorage.removeItem(localStorageKey);
+            // window.localStorage.removeItem(localStorageConnectorId);
+            metaMask.deactivate()
             onDismiss();
-            window.location.reload();
+            // window.location.reload();
           }}
         >
 

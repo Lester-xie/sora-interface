@@ -28,7 +28,7 @@ export function useETHBalances(
 
   const results = useSingleContractMultipleData(
     multicallContract,
-    'getEthBalance',
+    'balanceOf',
     addresses.map(address => [address])
   )
 
@@ -127,4 +127,10 @@ export function useAllTokenBalances(): { [tokenAddress: string]: TokenAmount | u
   const allTokensArray = useMemo(() => Object.values(allTokens ?? {}), [allTokens])
   const balances = useTokenBalances(account ?? undefined, allTokensArray)
   return balances ?? {}
+}
+
+export function useNewCurrencyBalance(account?: string, currency?: Currency) {
+  console.log('account: ', account)
+  console.log('currency: ', currency)
+  return 100;
 }

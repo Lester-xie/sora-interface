@@ -374,8 +374,6 @@ const Swap = () => {
   }
   const balance =  getOwner()
 
-  console.log('balance ??', balance)
-
   let handleIsClick = true;
 
   // 点击领取空投
@@ -385,7 +383,6 @@ const Swap = () => {
     }
     handleIsClick = false;
     const balance = await getOwner()
-    console.log('balance ?????', balance)
 
     if(!account){
       // alert("请先登录")

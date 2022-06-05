@@ -1,9 +1,10 @@
 import { ChainId } from '../index'
-import MULTICALL_ABI from './abi.json'
+import MULTICALL_ABI from './WADA_abi.json'
 
 const MULTICALL_NETWORKS: { [chainId in ChainId]: string } = {
-  [ChainId.MAINNET]: '0xC775519F53fA460cE29a4EeE414E43D4BFf6cC1D', // TODO
-  [ChainId.OKTESTNET]: '0xC775519F53fA460cE29a4EeE414E43D4BFf6cC1D',
+  [ChainId.MAINNET]: '0xb7b51Abbeb753A5c5314c4C2f9104370fCf60995', // TODO
+  [ChainId.OKTESTNET]: '0xb7b51Abbeb753A5c5314c4C2f9104370fCf60995',
 }
 
 export { MULTICALL_ABI, MULTICALL_NETWORKS }
+

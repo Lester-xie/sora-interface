@@ -14,36 +14,36 @@ const connectors = [
     icon: Metamask,
     connectorId: "Injected",
   },
-  {
-    title: "TokenPocket",
-    icon: TokenPocket,
-    connectorId: "Injected",
-  },
-  {
-    title: "ONTO",
-    icon: ONTO,
-    connectorId: "Injected",
-  },
-  {
-    title: "HyperPay",
-    icon: HyperPay,
-    connectorId: "Injected",
-  },
-  {
-    title: "BitKeep",
-    icon: BitKeep,
-    connectorId: "Injected",
-  },
-  {
-    title: "AoLink",
-    icon: AoLink,
-    connectorId: "Injected",
-  },
-  {
-    title: 'Coinhub',
-    icon: Coinhub,
-    connectorId: "Injected",
-  }
+  // {
+  //   title: "TokenPocket",
+  //   icon: TokenPocket,
+  //   connectorId: "Injected",
+  // },
+  // {
+  //   title: "ONTO",
+  //   icon: ONTO,
+  //   connectorId: "Injected",
+  // },
+  // {
+  //   title: "HyperPay",
+  //   icon: HyperPay,
+  //   connectorId: "Injected",
+  // },
+  // {
+  //   title: "BitKeep",
+  //   icon: BitKeep,
+  //   connectorId: "Injected",
+  // },
+  // {
+  //   title: "AoLink",
+  //   icon: AoLink,
+  //   connectorId: "Injected",
+  // },
+  // {
+  //   title: 'Coinhub',
+  //   icon: Coinhub,
+  //   connectorId: "Injected",
+  // }
 ];
 
 export default connectors;

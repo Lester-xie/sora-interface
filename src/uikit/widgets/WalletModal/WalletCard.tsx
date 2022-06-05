@@ -1,8 +1,9 @@
-import React from "react";
+import React, {useEffect} from "react";
 import Button from "../../components/Button/Button";
 import Text from "../../components/Text/Text";
 import { localStorageKey,localStorageConnectorId } from "./config";
 import { Login, Config } from "./types";
+import { metaMask } from '../../../connectors/metaMask'
 
 interface Props {
   walletConfig: Config;
@@ -18,10 +19,10 @@ const WalletCard: React.FC<Props> = ({ login, walletConfig, onDismiss, mb }) => 
       fullWidth
       variant="tertiary"
       onClick={() => {
-        console.log(walletConfig);
-        login(walletConfig.connectorId);
-        window.localStorage.setItem(localStorageKey, "1");
-        window.localStorage.setItem(localStorageConnectorId, walletConfig.connectorId);
+        metaMask.activate()
+        // login(walletConfig.connectorId);
+        // window.localStorage.setItem(localStorageKey, "1");
+        // window.localStorage.setItem(localStorageConnectorId, walletConfig.connectorId);
         onDismiss();
       }}
       style={{ justifyContent: "space-between" }}
